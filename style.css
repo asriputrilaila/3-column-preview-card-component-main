@@ -8,12 +8,7 @@
  body{
      color: white;
  } 
-#box-container {
-    width: 60%;
-    margin: 100px auto 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
+
   #content{
       margin:40px;
   }
@@ -50,9 +45,9 @@
   button {    
     font-family: "Lexend Deca";
     border-radius: 20px;
-	text-align: center;
-	padding: 10px;
-	font-size: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
     width: 100px;
   }
   .buttonsedan {
@@ -77,4 +72,22 @@
     background-color: hsl(179, 100%, 13%);
     color: white;
   }
+
+  @media screen and (max-width:600px) {
+    #box-container {
+      width: 60%;
+      margin: 100px auto 50px;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
   
+  @media screen and (max-width:1440px) and (min-width:600px) {    
+    
+      #box-container {
+        width: 60%;
+        margin: 100px auto 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+  }
